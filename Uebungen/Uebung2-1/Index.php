@@ -1,7 +1,7 @@
 <?php
     $servername = "localhost";
-    $username = "username";
-    $password = "password";
+    $username = "root";
+    $password = "";
     
     $conn = mysqli_connect($servername, $username, $password);
     
@@ -10,7 +10,9 @@
     }
     echo "Connected successfully";
 
-    $sql = "SELECT * FROM customers WHERE job_title = ´Purchasing Representative´";
+    mysqli_select_db($conn, "northwind");
+
+    $sql = 'SELECT * FROM customers WHERE job_title = "Purchasing Representative"';
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
