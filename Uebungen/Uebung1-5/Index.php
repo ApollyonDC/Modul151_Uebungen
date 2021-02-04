@@ -38,7 +38,7 @@
 
     echo 'Items on your pizza:<br>';
     foreach($items as $value){
-        echo "{$value} <br>";
+        echo " - {$value} <br>";
     };
 
     $_SESSION['items'] = $items;
