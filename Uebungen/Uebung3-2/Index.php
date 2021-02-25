@@ -50,19 +50,18 @@ class DB
     }
 
     public function query($sql, $params){
-        $stmt = $c->prepare($sql);
+        $stmt = $this->pdo->prepare($sql);
         $stmt->execute(array([
             $params
         ]));
     }
 
     public function select($sql, $params){
-        $stmt = $c->prepare($sql);
-        $result = $stmt->execute(array([
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(array([
             $params
         ]));
-
-        $endResult = $stmt->fetch();
+        return $stmt->fetchAll();
     }
 }
 
