@@ -58,9 +58,11 @@ class DB
 
     public function select($sql, $params){
         $stmt = $c->prepare($sql);
-        $stmt->execute(array([
+        $result = $stmt->execute(array([
             $params
         ]));
+
+        $endResult = $stmt->fetch();
     }
 }
 
