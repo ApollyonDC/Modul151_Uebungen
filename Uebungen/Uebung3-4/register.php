@@ -26,12 +26,13 @@ if(isset($_POST['submit'])){
     try {
         $db->startTransaction();
 
-        $usernamevar = $_POST['username'];
-        $passwordvar = $_POST['password'];
-        $firstnamevar = $_POST['firstname'];
-        $lastnamevar = $_POST['lastname'];
+        $db->query("INSERT INTO logins(username, password, first_name, last_name) VALUES(:usernamevar, :passwordvar, :firstnamevar, :lastnamevar)",[
 
-        $db->query("INSERT INTO logins(username, password, first_name, last_name) VALUES(:usernamevar, :passwordvar, :firstnamevar, :lastnamevar)");
+            ':usernamevar' => $_POST['username'],
+            ':passwordvar' => password_hash($_POST['password'], PASSWORD_DEFAULT),
+            ':firstnamevar' => $_POST['firstname'],
+            ':lastnamevar' => $_POST['lastname']
+        ]);
     }
     catch (\Exception $e) {
         $db->rollback();
