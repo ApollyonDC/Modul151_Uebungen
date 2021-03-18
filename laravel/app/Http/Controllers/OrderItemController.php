@@ -8,17 +8,20 @@ class OrderItemController extends Controller
 {
     public function loadCart(Request $request){
         if($request->session()->has('itemsInCart')){
-            $itemsInCart = $request->session()->get('items');
+            $itemsInCart = $request->session()->get('itemsInCart');
         }
         else{
-            $itemsInCart = array();
+            $itemsInCart = [];
         }
     }
 
     public function addItem($id, Request $request){
-        loadCart();
-        $itemsInCart.push($id);
+        $this->loadCart($request);
+        $itemsInCart = $request->session()->get('itemsInCart');
+        $product = \App\Models\Product::find($id);
+        $products = \App\Models\Product::all();
+        array_push($itemsInCart, $product);
         $request->session()->put('itemsInCart',$itemsInCart);
-        return view('order', ['order' => $itemsInCart]);
+        return view('products', ['products' => $products]);
     }
 }

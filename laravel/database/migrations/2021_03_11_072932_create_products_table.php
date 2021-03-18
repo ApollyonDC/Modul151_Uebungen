@@ -23,6 +23,9 @@ class CreateProductsTable extends Migration
             $table->text('manual');
             $table->string('image');
         });
+        
+        DB::table('products')->insert(['name' => 'table', 'price' => 3.75, 'details' => 'ggbruder','manual'=>'beannnzzz', 'image' => 'https://picsum.photos/200']);
+        DB::table('products')->insert(['name' => 'lamp', 'price' => 8.75, 'details' => 'ggbruder','manual'=>'beannnzzz', 'image' => 'https://picsum.photos/200']);
     }
 
     /**
