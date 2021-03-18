@@ -12,13 +12,18 @@ class UserController extends Controller
 
             try {
                 DB::beginTransaction();
-                DB::table('logins')->insert(['username' => $_POST['username'], 'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-                'firstname' => $_POST['firstname'],'lastname'=> $_POST['lastname']]);
+                DB::table('users')->insert(['email' => $_POST['email'], 'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
+                'firstname' => $_POST['firstname'],'lastname'=> $_POST['lastname'],'street'=> $_POST['street'],'zip'=> $_POST['zip']
+                ,'city'=> $_POST['city'],'phone'=> $_POST['phone']]);
+                return view('products');
             }
             catch (\Exception $e) {
                 DB::rollBack();
                 throw $e;
             }
+        }
+        else{
+            return view('register');
         }
     }
 }

@@ -21,3 +21,5 @@ Route::get('/products', [\App\Http\Controllers\ProductController::class, 'list']
 Route::get('/product/{id}', [\App\Http\Controllers\ProductController::class, 'detail']);
 Route::get('/orderProduct/{id}', [\App\Http\Controllers\OrderItemController::class, 'addItem']);
 Route::get('/order', [\App\Http\Controllers\OrderController::class, 'cart']);
+Route::get('/register', [\App\Http\Controllers\UserController::class, 'createUser']);
+Route::post('/products', [\App\Http\Controllers\UserController::class, 'createUser']);
