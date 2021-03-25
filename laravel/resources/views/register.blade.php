@@ -7,15 +7,16 @@
     <title>Register</title>
 </head>
 <body>
-    <form action="products" method="POST">
+    <form action="registerUser" method="POST">
     <input type="text" name="firstname" placeholder="Vorname">
     <input type="text" name="lastname" placeholder="Nachname">
     <input type="text" name="street" placeholder="Strasse">
     <input type="text" name="zip" placeholder="Zip">
     <input type="text" name="city" placeholder="Stadt">
     <input type="number" name="phone" placeholder="Telefonnummer">
+    <input type="email" name="email" placeholder="E-mail">
     <input type="password" name="password" placeholder="password">
-    <input type="submit" value="register">
+    <input type="submit" value="submit" name="submit">
     </form>
 </body>
 </html>
