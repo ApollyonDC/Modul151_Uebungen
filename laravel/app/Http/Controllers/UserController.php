@@ -57,7 +57,15 @@ class UserController extends Controller
     public function loginLoader(){
         return view('login');
     }
-    public function orders(){
-        
+    public function orders(Request $request){
+        if($request->session()->has('userId')){
+            $userId = $request->session()->get('userId');
+            $orders = \App\Models\Order::all()->where('user_id', $userId);
+            return view('profile', ['orders' => $orders]);
+            }
+            else
+            {
+                return redirect('/login');
+            }
     }
 }

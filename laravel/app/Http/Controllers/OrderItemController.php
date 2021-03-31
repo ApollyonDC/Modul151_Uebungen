@@ -22,15 +22,15 @@ class OrderItemController extends Controller
         $product = \App\Models\Product::find($id);
         $products = \App\Models\Product::all();
 
-        $exists = false;
+        $exists = 0;
         foreach($itemsInCart as $_product){
             if($product->id == $_product->id){
                 $_product->count ++;
-                $exists = true;
+                $exists = 1;
                 break;
             }
         }
-        if(!$exists){
+        if($exists == 0){
             $product->count = 1;
             array_push($itemsInCart, $product);
         }

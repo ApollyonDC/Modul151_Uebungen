@@ -8,14 +8,14 @@
 </head>
 <body>
     <form action="registerUser" method="POST">
-    <input type="text" name="firstname" placeholder="Vorname">
-    <input type="text" name="lastname" placeholder="Nachname">
-    <input type="text" name="street" placeholder="Strasse">
-    <input type="text" name="zip" placeholder="Zip">
-    <input type="text" name="city" placeholder="Stadt">
-    <input type="number" name="phone" placeholder="Telefonnummer">
-    <input type="email" name="email" placeholder="E-mail">
-    <input type="password" name="password" placeholder="password">
+    <input type="text" name="firstname" placeholder="Vorname" required>
+    <input type="text" name="lastname" placeholder="Nachname" required>
+    <input type="text" name="street" placeholder="Strasse" required>
+    <input type="text" name="zip" placeholder="Zip" required>
+    <input type="text" name="city" placeholder="Stadt" required>
+    <input type="number" name="phone" placeholder="Telefonnummer" required>
+    <input type="email" name="email" placeholder="E-mail" required>
+    <input type="password" name="password" placeholder="password" required>
     <input type="submit" value="submit" name="submit">
     </form>
 </body>

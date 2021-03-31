@@ -35,4 +35,12 @@ class OrderController extends Controller
             return redirect('/login');
         }
     }
+    public function orderInfo(Request $request){
+        if($request->session()->has('itemsInCart')){
+            return view('orderInfo');
+        }
+        else{
+            return redirect('/products');
+        }
+    }
 }

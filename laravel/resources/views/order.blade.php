@@ -19,8 +19,6 @@
             </tr>
         @endforeach
     </table>
-    <form action="finishOrder" method="POST">
-    <input type="submit" value="Bestellung abschliessen!" name="submit">
-    </form>
+    <a class="btn-area" href="/orderInfo">Weiter</a>
     </body>
 </html>
