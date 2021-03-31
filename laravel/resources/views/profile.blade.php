@@ -9,6 +9,7 @@
         </head>
         <body>
             <a class="btn-area" href="/products">zu Produkten zurückkehren</a>
+            <a class="anzeigecart" href="/logout">ausloggen</a>
             <h1>Bestellungen</h1>    
             <table>
                 <tr>

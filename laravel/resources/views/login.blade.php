@@ -12,5 +12,6 @@
     <input type="password" name="password" placeholder="password">
     <input type="submit" value="submit" name="submit">
     </form>
+    <a href="/register">Registrierung</a>
 </body>
 </html>

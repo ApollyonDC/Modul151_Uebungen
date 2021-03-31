@@ -53,6 +53,10 @@ class UserController extends Controller
             }
         }
     }
+    public function logout(Request $request){
+        $request->session()->forget('userId');
+        return redirect('/products');
+    }
 
     public function loginLoader(){
         return view('login');

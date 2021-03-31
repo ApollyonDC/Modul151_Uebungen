@@ -30,3 +30,4 @@ Route::post('/registerUser', [\App\Http\Controllers\UserController::class, 'crea
 Route::get('/login', [\App\Http\Controllers\UserController::class, 'loginLoader']);
 Route::post('/loginUser', [\App\Http\Controllers\UserController::class, 'login']);
 Route::get('/profile', [\App\Http\Controllers\UserController::class, 'orders']);
+Route::get('/logout', [\App\Http\Controllers\UserController::class, 'logout']);
