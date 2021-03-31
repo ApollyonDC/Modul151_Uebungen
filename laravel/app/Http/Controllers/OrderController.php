@@ -8,7 +8,6 @@ class OrderController extends Controller
 {
     public function cart(Request $request) {
         $itemsInCart = $request->session()->get('itemsInCart');
-        unset($itemsInCart[0]);
         return view('order', ['itemsInCart' => $itemsInCart]);
     }
 
