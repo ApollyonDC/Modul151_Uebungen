@@ -57,4 +57,7 @@ class UserController extends Controller
     public function loginLoader(){
         return view('login');
     }
+    public function orders(){
+        
+    }
 }

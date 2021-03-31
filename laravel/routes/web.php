@@ -28,3 +28,4 @@ Route::get('/register', [\App\Http\Controllers\UserController::class, 'registrat
 Route::post('/registerUser', [\App\Http\Controllers\UserController::class, 'createUser']);
 Route::get('/login', [\App\Http\Controllers\UserController::class, 'loginLoader']);
 Route::post('/loginUser', [\App\Http\Controllers\UserController::class, 'login']);
+Route::get('/profile', [\App\Http\Controllers\UserController::class, 'orders']);

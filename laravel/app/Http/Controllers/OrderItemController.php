@@ -12,6 +12,7 @@ class OrderItemController extends Controller
         }
         else{
             $itemsInCart = [];
+            $request->session()->put('itemsInCart', $itemsInCart);
         }
     }
 
@@ -20,7 +21,19 @@ class OrderItemController extends Controller
         $itemsInCart = $request->session()->get('itemsInCart');
         $product = \App\Models\Product::find($id);
         $products = \App\Models\Product::all();
-        array_push($itemsInCart, $product);
+
+        $exists = false;
+        foreach($itemsInCart as $_product){
+            if($product->id == $_product->id){
+                $_product->count ++;
+                $exists = true;
+                break;
+            }
+        }
+        if(!$exists){
+            $product->count = 1;
+            array_push($itemsInCart, $product);
+        }
         $request->session()->put('itemsInCart',$itemsInCart);
         return view('products', ['products' => $products]);
     }

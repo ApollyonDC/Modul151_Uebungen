@@ -8,11 +8,13 @@
         <tr>
             <th>Name</th>
             <th>Preis</th>
+            <th>Amount</th>
         </tr>
         @foreach ($itemsInCart as $product)
             <tr>
                 <td>{{$product['name']}}</td>
                 <td>{{$product['price']}}</td>
+                <td>{{$product['count']}}</td>
                 <td><img src="{{ $product->image }}" alt="{{ $product->name }}"></td>
             </tr>
         @endforeach

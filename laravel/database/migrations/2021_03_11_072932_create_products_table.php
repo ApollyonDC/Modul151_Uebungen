@@ -25,6 +25,10 @@ class CreateProductsTable extends Migration
         });
         
         DB::table('products')->insert(['name' => 'table', 'price' => 3.75, 'details' => 'ggbruder','manual'=>'beannnzzz', 'image' => 'https://picsum.photos/200']);
+        DB::table('products')->insert(['name' => 'apfel', 'price' =>2.00, 'details' => 'ggbruder','manual'=>'beannnzzz', 'image' => 'https://picsum.photos/200']);
+        DB::table('products')->insert(['name' => 'affe', 'price' => 420.00, 'details' => 'ggbruder','manual'=>'beannnzzz', 'image' => 'https://picsum.photos/200']);
+        DB::table('products')->insert(['name' => 'elias', 'price' => 0.00, 'details' => 'ggbruder','manual'=>'beannnzzz', 'image' => 'https://picsum.photos/200']);
+        DB::table('products')->insert(['name' => 'el tony', 'price' => 2.50, 'details' => 'ggbruder','manual'=>'beannnzzz', 'image' => 'https://picsum.photos/200']);
         DB::table('products')->insert(['name' => 'lamp', 'price' => 8.75, 'details' => 'ggbruder','manual'=>'beannnzzz', 'image' => 'https://picsum.photos/200']);
     }
 
