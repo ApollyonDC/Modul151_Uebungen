@@ -15,4 +15,5 @@
                 <td><a href="/orderProduct/{{ $product->id }}">Warenkorb hinzufügen</a></td>
             </tr>
     </table>
+    <a href="/products">Zurück</a>
 </html>

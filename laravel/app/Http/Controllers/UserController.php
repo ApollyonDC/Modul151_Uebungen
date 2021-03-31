@@ -45,11 +45,10 @@ class UserController extends Controller
 
         if($user && password_verify($request->password, $user->password)){
             $request->session()->put('userId', $user->id);
-            return redirect('/products');
             if($request->session()->has('itemsInCart')){
-                $this->redirectTo = url()->previous();
+                return redirect('/order');
             }else{
-                return redirect('/login');
+                return redirect('/products');
             }
         }
     }

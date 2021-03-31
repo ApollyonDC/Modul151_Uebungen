@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/products');
 });
 
 Route::get('/products', [\App\Http\Controllers\ProductController::class, 'list']);
@@ -23,8 +23,6 @@ Route::get('/orderProduct/{id}', [\App\Http\Controllers\OrderItemController::cla
 Route::get('/order', [\App\Http\Controllers\OrderController::class, 'cart']);
 Route::get('/orderInfo', [\App\Http\Controllers\OrderController::class, 'orderInfo']);
 Route::post('/finishOrder', [\App\Http\Controllers\OrderController::class, 'finishOrder']);
-Route::get('/confirmOrder', [\App\Http\Controllers\OrderController::class, 'confirmOrder']);
-Route::post('/placeOrder', [\App\Http\Controllers\OrderController::class, 'placeOrder']);
 Route::get('/register', [\App\Http\Controllers\UserController::class, 'registration']);
 Route::post('/registerUser', [\App\Http\Controllers\UserController::class, 'createUser']);
 Route::get('/login', [\App\Http\Controllers\UserController::class, 'loginLoader']);

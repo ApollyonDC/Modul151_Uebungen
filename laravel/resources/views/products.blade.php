@@ -21,7 +21,7 @@
                 <a href="/product/{{ $product->id }}"><img src="{{$product->image}}" alt="$product->name" class="itemPicture"></a>
                 <div class="normalPrice">{{ $product->name}}</div>
                 <div class="specialOffer">{{ $product->price }} CHF</div>
-                <a href="/orderProduct/{{ $product->id }}" class="addToCart"><button type="button">Add to Cart</button></a>
+                <a href="/orderProduct/{{ $product->id }}" class="addToCart">Add to Cart</a>
             </div>
             @endforeach
         </div>

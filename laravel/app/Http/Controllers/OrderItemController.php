@@ -27,7 +27,6 @@ class OrderItemController extends Controller
             if($product->id == $_product->id){
                 $_product->count ++;
                 $exists = 1;
-                break;
             }
         }
         if($exists == 0){

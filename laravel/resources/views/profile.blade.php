@@ -20,7 +20,7 @@
                 @foreach ($orders as $order)
                 <tr>
                     <td>{{ $order->id }}</td>
-                    <td>{{ $order->price }}</td>
+                    <td>{{ $order->price }} CHF</td>
                     <td>{{ $order->created_at }}</td>
                 </tr>
                 @endforeach

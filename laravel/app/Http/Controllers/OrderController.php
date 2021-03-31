@@ -25,7 +25,6 @@ class OrderController extends Controller
                 $orders->user_id=$userId;
                 $orders->price=$totalPrice;
                 $orders->save();
-                
                 $request->session()->forget('itemsInCart');
                 return view('orderComplete');
             }else{

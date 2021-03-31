@@ -18,4 +18,5 @@
         <input type="email" name="email" placeholder="E-mail" required>
     <input type="submit" value="Bestellung abschliessen!" name="submit">
     </form>
+    <a href="/order">Zurück</a>
 </html>

@@ -20,5 +20,6 @@
         @endforeach
     </table>
     <a class="btn-area" href="/orderInfo">Weiter</a>
+    <a href="/products">Zurück</a>
     </body>
 </html>
