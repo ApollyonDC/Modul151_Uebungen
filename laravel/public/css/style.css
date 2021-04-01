@@ -37,6 +37,9 @@ header{
     border-radius: 5px;
     background: #d22938;
 }
+.buttonWidth{
+    width: 25%;
+}
 .anzeigecart{
     cursor: pointer;
     color: #d22938;
@@ -54,7 +57,6 @@ border-top: 10px solid #d22938;
 }
 label, input, textarea{
   display: block;
-  width: 100%;
   font-size: 12pt;
   line-height: 12pt * 2;
   font-family: 'Spartan';
@@ -91,6 +93,7 @@ input{
   text-align: center;
 }
 
+
 .shopItem img{
     width: 200px;
     display: block;
@@ -98,6 +101,14 @@ input{
     margin-right: auto;
     margin-top: 20px;
 	cursor: pointer;
+}
+
+.productDetail img{
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }
 
 .normalPrice .specialOffer

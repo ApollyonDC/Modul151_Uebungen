@@ -37,7 +37,7 @@
         @endforeach
     </table>
     <h2>Total: {{$total}} CHF</h2>
-    <a class="btn-area" href="/orderInfo">Weiter</a>
-    <a href="/products">Zurück</a>
+    <a href="/products" class="btn-area">Zurück</a>
+    <a href="/orderInfo">Weiter</a>
     </body>
 </html>

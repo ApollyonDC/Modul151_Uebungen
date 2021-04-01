@@ -15,20 +15,19 @@
             <a class="anzeigecart" href="/profile"><img src="https://www.svgrepo.com/show/43426/profile.svg" alt="Profile" class="profile"></a>
             </div>
         </header>
-        <h1>Warenkorb</h1>    
-        <table>
+        <h1>{{ $product->name }}</h1>    
+        <table class="productDetail">
             <tr>
-                <th>Name</th>
                 <th>Preis</th>
                 <th>Foto</th>
                 <th>Details</th>
             </tr>
                 <tr>
-                    <td>{{ $product->name }}</td>
-                    <td>{{ $product->price }}</td>
+                    <td>{{ $product->price }} CHF</td>
                     <td><img src="{{ $product->image }}" alt="{{ $product->name }}"></td>
+                    <td>{{ $product->details }}</td>
                     <td>{{ $product->manual }}</td>
-                    <td><a href="/orderProduct/{{ $product->id }}">Warenkorb hinzufügen</a></td>
+                    <td class = "buttonWidth"><a href="/orderProduct/{{ $product->id }}" class="btn-area">Warenkorb hinzufügen</a></td>
                 </tr>
         </table>
         <a href="/products">Zurück</a>
