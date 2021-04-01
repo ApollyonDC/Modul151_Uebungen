@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::get('/products', [\App\Http\Controllers\ProductController::class, 'list']);
 Route::get('/product/{id}', [\App\Http\Controllers\ProductController::class, 'detail']);
 Route::get('/orderProduct/{id}', [\App\Http\Controllers\OrderItemController::class, 'addItem']);
+Route::get('/removeProduct/{id}', [\App\Http\Controllers\OrderController::class, 'removeItem']);
+Route::get('/incrementProduct/{id}', [\App\Http\Controllers\OrderController::class, 'incrementItem']);
+Route::get('/decrementProduct/{id}', [\App\Http\Controllers\OrderController::class, 'decrementItem']);
 Route::get('/order', [\App\Http\Controllers\OrderController::class, 'cart']);
 Route::get('/orderInfo', [\App\Http\Controllers\OrderController::class, 'orderInfo']);
 Route::post('/finishOrder', [\App\Http\Controllers\OrderController::class, 'finishOrder']);

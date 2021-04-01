@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Bestellung abgeschlossen!</title>
+        <title>Bestellung</title>
     </head>
 
     <body>
@@ -19,4 +19,5 @@
     <input type="submit" value="Bestellung abschliessen!" name="submit">
     </form>
     <a href="/order">Zurück</a>
+    <a href="/orderInfo">Meine Adresse verwenden</a>
 </html>

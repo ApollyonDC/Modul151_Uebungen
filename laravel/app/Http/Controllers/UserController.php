@@ -50,6 +50,7 @@ class UserController extends Controller
             }else{
                 return redirect('/products');
             }
+            $request->session()->put('userAd', 1);
         }
     }
     public function logout(Request $request){
