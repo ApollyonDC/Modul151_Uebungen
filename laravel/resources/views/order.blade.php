@@ -14,7 +14,7 @@
             <a class="anzeigecart" href="/profile"><img src="https://www.svgrepo.com/show/43426/profile.svg" alt="Profile" class="profile"></a>
             </div>
         </header>
-        <h1>Bestellung</h1>
+        <h1>Warenkorb</h1>
         <table>
         <tr>
             <th>Name</th>
