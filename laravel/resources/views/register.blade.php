@@ -9,11 +9,12 @@
     </head>
     <body>
         <header id="navbar">
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhybridtechcar.com%2Fwp-content%2Fuploads%2F2019%2F04%2Fdownload-17.png&f=1&nofb=1" alt="logo" class="logo">
+                <img href="/products" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhybridtechcar.com%2Fwp-content%2Fuploads%2F2019%2F04%2Fdownload-17.png&f=1&nofb=1" alt="logo" class="logo">
                 <div id="cartnav">
                 <a class="btn-area" href="/products">Zurück</a>
                 </div>
-            </header>
+        </header>
+        <h1>Registrierung</h1>
         <form action="registerUser" method="POST">
         <input type="text" name="firstname" placeholder="Vorname" required>
         <input type="text" name="lastname" placeholder="Nachname" required>
