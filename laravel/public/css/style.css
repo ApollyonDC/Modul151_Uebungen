@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -45,6 +47,23 @@ header{
     border-radius: 5px;
     background: #fff;
 }
+form{
+background: #f8f4e5;
+padding: 50px 100px;
+border-top: 10px solid #d22938;
+}
+label, input, textarea{
+  display: block;
+  width: 100%;
+  font-size: 12pt;
+  line-height: 12pt * 2;
+  font-family: 'Spartan';
+  width: 50%;
+}
+input{
+  margin-bottom: 12pt * 2;
+}
+
 .shop{
     display: flex;
     justify-content: space-between;

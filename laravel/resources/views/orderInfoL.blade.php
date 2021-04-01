@@ -1,6 +1,11 @@
 <html>
     <head>
-        <title>Bestellung</title>
+        <meta charset="utf-8">
+        <title>M151 BBZW Dorfladen v2</title>
+        <base href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="{{asset('/css/style.css')}}">
     </head>
     <body>
         <header id="navbar">
@@ -12,8 +17,7 @@
         </header>
     <form action="finishOrder" method="POST">
         <h2>Zahlungsart:</h2>
-        <input type="radio" name="Zahlungsart" id="Rechnung" value="Rechnung">
-        <label for="Rechnung">Rechnung</label>
+        <p>Rechnung</p>
         <h2>Personaldaten:</h2>
         <p>{{$user['first_name']}}</p>
         <p>{{$user['last_name']}}</p>
@@ -21,8 +25,8 @@
         <p>{{$user['zip']}}</p>
         <p>{{$user['city']}}</p>
         <p>{{$user['phone']}}</p>
-    <input type="submit" value="Bestellung abschliessen!" name="submit">
+    <input type="submit" class="btn-area" value="Bestellung abschliessen!" name="submit">
     </form>
-    <a href="/orderInfo">andere Lieferadresse</a>
-    <a href="/order">Zurück</a>
+    <a href="/order" class="btn-area">Zurück</a>
+    <a href="/orderInfo" class="anzeigecart">andere Lieferadresse</a>
 </html>
